@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>김맑음＆김맑음 모바일청첩장</title>
+<link rel="stylesheet" href="common.css" type="text/css">
+<link rel="stylesheet" href="slide.css" type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+    
+<meta property="og:image" content="images/KakaoTalk_20231120_201116419.jpg">
+</head>
+
+<body>
+    
+    
+    <div class="section_01">
+     <img alt="" src="images/img__16.png" width="30%">  
+     <p>서로 다른 곳을 바라 보며 살던 두 사람이<br>
+        이제 같은 곳을 바라보는 서로가 되려 합니다.<br>
+        모든 날, 모든 순간을 아름답게 만들어가고<br>
+        이끌어주고, 응원해주는 서로가 되겠습니다.<br>
+        새로 시작하는 이 자리에 오셔서<br>
+        축복이 가득하길 함께 기원해 주시기 바랍니다.</p>
+    </div>
+    
+    <div class="section_02">
+        <img alt="" src="images/img__35.png" width="30%">
+        <img alt="" src="images/KakaoTalk_20231120_201116419_01.jpg" width="90%">
+        <img alt="" src="images/img__52.png" width="40%">
+    </div>
+    
+    <div class="section_03">
+        <img alt="" src="images/img__68.png" width="90%">
+        <p>20NN년 03월 11일 토요일 낮 1시 미리웨딩홀 14층</p>
+        
+    </div>
+    
+    <!--슬라이드 갤러리-->
+    <div class="slider-container">
+      <div class="slides">
+        <div class="slide"><img src="images/KakaoTalk_20231120_201116419.jpg" alt="Slide 1"></div>
+        <div class="slide"><img src="images/KakaoTalk_20231120_201116419_02.jpg" alt="Slide 2"></div>
+        <div class="slide"><img src="images/KakaoTalk_20231120_201116419_03.jpg" alt="Slide 3"></div>
+        <div class="slide"><img src="images/KakaoTalk_20231120_201116419_04.jpg" alt="Slide 3"></div>
+        <!-- Add more slides as needed -->
+      </div>
+
+      <button class="prev" onclick="plusSlides(-1)">❮</button>
+      <button class="next" onclick="plusSlides(1)">❯</button>
+        
+        
+      <!--슬라이드 스크립트-->    
+      <script>
+      let slideIndex = 1;
+
+      function showSlides(n) {
+        let i;
+        const slides = document.getElementsByClassName("slide");
+
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+      }
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      showSlides(slideIndex);
+    </script>  
+        
+    </div>
+    
+    <div class="section_04">
+    
+  <!-- * 카카오맵 - 지도퍼가기 -->
+    <!-- 1. 지도 노드 -->
+    <div id="daumRoughmapContainer1701062605823" class="root_daum_roughmap root_daum_roughmap_landing" style="width: 100%;"></div>
+
+    <!--
+        2. 설치 스크립트
+        * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+    -->
+    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+    <!-- 3. 실행 스크립트 -->
+    <script charset="UTF-8">
+        new daum.roughmap.Lander({
+            "timestamp" : "1701062605823",
+            "key" : "2gyoa",
+            "mapHeight" : "900"
+        }).render();
+    </script>
+        
+    <p><strong>지하철</strong> 보라매공원역 1번출구 도보 3분<br>
+    <strong>버스</strong> 900,150,505번 보라매공원 정류장 하차 도보 5분<br>
+    <strong>택시</strong> 보라매공원역 1번출구 농심컨벤션웨딩홀 하차</p>
+        
+     </div>
+    
+    <div class="section_05">
+        
+        
+        <img alt="" src="images/img__86.png" width="30%">
+        <div class="bank_box">
+            <div>
+                <p id="text1"><strong>김맑음</strong><br>토스뱅크 1000-000-0000</p>
+                <button onclick="copyText('text1')" class="btn">복사하기</button>
+            </div>
+            <div>
+                <p id="text2"><strong>김맑음</strong><br>토스뱅크 1234-000-0000</p>
+                <button onclick="copyText('text2')" class="btn">복사하기</button>
+            </div>
+        </div>
+        
+        <script>
+            function copyText(textId) {
+              /* Get the text to be copied based on the provided ID */
+              var copyText = document.getElementById(textId);
+
+              /* Create a temporary input element */
+              var tempInput = document.createElement("textarea");
+
+              /* Set the value of the temporary input to the text content */
+              tempInput.value = copyText.textContent;
+
+              /* Append the temporary input to the document */
+              document.body.appendChild(tempInput);
+
+              /* Select the text in the temporary input */
+              tempInput.select();
+              tempInput.setSelectionRange(0, 99999); /* For mobile devices */
+
+              /* Copy the text inside the temporary input to the clipboard */
+              document.execCommand("copy");
+
+              /* Remove the temporary input from the document */
+              document.body.removeChild(tempInput);
+
+              /* Alert the user that the text has been copied */
+              alert("계좌번호가 복사되었습니다: " + copyText.textContent);
+            }
+        </script>
+        
+        
+        
+        <p>행복한 이 자리에 와주셔서<br>저희들의 시작을 축복해 주시기 바랍니다.<br>
+주신 축복 잊지않고 행복한 가정을 꾸리도록 하겠습니다.</p>
+        
+        
+    </div>
+    
+</body>
+</html>
