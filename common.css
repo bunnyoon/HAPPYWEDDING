@@ -15,7 +15,7 @@ body {
     }
 
 p {
-    font-size: 1.1em !important; 
+    font-size: 1.1em; 
 }
 
 .section_01,.section_02,.section_03,.section_05{
@@ -30,6 +30,7 @@ p {
 
 .section_03>p{
     margin: 30px 0 100px 0;
+    font-size: 1.6em;
 }
 
 #calendar {
