@@ -33,6 +33,26 @@ p {
     margin: 30px 0 100px 0;
 }
 
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.null-day {
+    background-color: #eee;
+}
+
+.special-date {
+    background-color: #f8cbad; /* 색상을 여러분이 원하는 색으로 변경하세요 */
+}
+
 .section_04 {
     padding-top: 100px;
 }
