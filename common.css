@@ -40,17 +40,14 @@ p {
 }
 
 .day {
-    padding: 10px;
+    padding: 50px;
     text-align: center;
-    border: 1px solid #ccc;
 }
 
-.null-day {
-    background-color: #eee;
-}
 
 .special-date {
-    background-color: #f8cbad; /* 색상을 여러분이 원하는 색으로 변경하세요 */
+    background-color: #f8cbad;
+    border-radius: 200px;
 }
 
 .section_04 {
